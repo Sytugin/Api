@@ -1,0 +1,322 @@
+{
+	"id": "eacc83cc-287b-47c4-aef5-1fcd2b1bf8f3",
+	"name": "DemoShopping",
+	"timestamp": "2025-01-19T08:54:05.786Z",
+	"collection_id": "40992590-8e39b415-5bd4-43cd-976e-dcf89d9a8e33",
+	"folder_id": "40992590-528ac5a8-e15f-451c-8f48-38640696b39d",
+	"environment_id": "40992590-7c5850da-4ab0-4a6c-8bb7-731da2828f49",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-01-19T08:54:02.200Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "09757d07-f64b-4152-9707-c83a63873092",
+			"name": "Возвращение списка всех продуктов",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 925,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус ответа 200 OK": true,
+				"Тип контента - application/json": true,
+				"Тело ответа - массив": true,
+				"Каждый продукт содержит id, name и price": true,
+				"Ответ не содержит пустых значений": true
+			},
+			"testPassFailCounts": {
+				"Статус ответа 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Тип контента - application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Тело ответа - массив": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Каждый продукт содержит id, name и price": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ не содержит пустых значений": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				925
+			],
+			"allTests": [
+				{
+					"Статус ответа 200 OK": true,
+					"Тип контента - application/json": true,
+					"Тело ответа - массив": true,
+					"Каждый продукт содержит id, name и price": true,
+					"Ответ не содержит пустых значений": true
+				}
+			]
+		},
+		{
+			"id": "3926d594-64e6-44f3-b436-1f93770890ce",
+			"name": "Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 894,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Ответ имеет правильный тип контента": true,
+				"Время ответа не превышает 2 секунд": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ имеет правильный тип контента": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Время ответа не превышает 2 секунд": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				894
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Ответ имеет правильный тип контента": true,
+					"Время ответа не превышает 2 секунд": true
+				}
+			]
+		},
+		{
+			"id": "666d0314-222f-4155-8ab5-51a924b211a4",
+			"name": "Поиск товара по id",
+			"url": "https://qa.demoshopping.ru/products/id/18951",
+			"time": 184,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Status code is 200": true,
+				"Ответ содержит все необходимые поля": true,
+				"Проверка типов данных": false,
+				"Бесплатная доставка включена": true,
+				"Проверка значений полей": false
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит все необходимые поля": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Проверка типов данных": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Бесплатная доставка включена": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Проверка значений полей": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				184
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Status code is 200": true,
+					"Ответ содержит все необходимые поля": true,
+					"Проверка типов данных": false,
+					"Бесплатная доставка включена": true,
+					"Проверка значений полей": false
+				}
+			]
+		},
+		{
+			"id": "ad47e5cd-8dc2-4a0c-ab12-75ba18749e33",
+			"name": "Полное обновление товара по id",
+			"url": "https://qa.demoshopping.ru/products/id/18951",
+			"time": 190,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус ответа 200": true,
+				"ID продукта передается в URL": true,
+				"Тип контента - соответствует требованиям": true,
+				"Время ответа меньше 2000 мс": true
+			},
+			"testPassFailCounts": {
+				"Статус ответа 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID продукта передается в URL": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Тип контента - соответствует требованиям": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Время ответа меньше 2000 мс": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Статус ответа 200": true,
+					"ID продукта передается в URL": true,
+					"Тип контента - соответствует требованиям": true,
+					"Время ответа меньше 2000 мс": true
+				}
+			]
+		},
+		{
+			"id": "a33a8266-3304-4096-b2a8-2fd1ebb06a2e",
+			"name": "Частичное обновление товара по id",
+			"url": "https://qa.demoshopping.ru/products/id/18891",
+			"time": 170,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус код: 200 OK": false,
+				"Ответ не пустой": false,
+				"Запрос выполнен за меньше чем 2000 мс": true
+			},
+			"testPassFailCounts": {
+				"Статус код: 200 OK": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Ответ не пустой": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Запрос выполнен за меньше чем 2000 мс": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				170
+			],
+			"allTests": [
+				{
+					"Статус код: 200 OK": false,
+					"Ответ не пустой": false,
+					"Запрос выполнен за меньше чем 2000 мс": true
+				}
+			]
+		},
+		{
+			"id": "1eedbc8f-2a98-448a-b45d-9ea58d6baef8",
+			"name": "Удаление товара по id",
+			"url": "https://qa.demoshopping.ru/products/id/18951",
+			"time": 216,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 2000ms": true,
+				"Статус-код 200 или 204": true,
+				"Ответ имеет правильный формат": true,
+				"Токен авторизации присутствует в запросе": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Статус-код 200 или 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ имеет правильный формат": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Токен авторизации присутствует в запросе": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				216
+			],
+			"allTests": [
+				{
+					"Response time is less than 2000ms": true,
+					"Статус-код 200 или 204": true,
+					"Ответ имеет правильный формат": true,
+					"Токен авторизации присутствует в запросе": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2579,
+	"collection": {
+		"requests": [
+			{
+				"id": "09757d07-f64b-4152-9707-c83a63873092",
+				"method": "GET"
+			},
+			{
+				"id": "3926d594-64e6-44f3-b436-1f93770890ce",
+				"method": "POST"
+			},
+			{
+				"id": "666d0314-222f-4155-8ab5-51a924b211a4",
+				"method": "GET"
+			},
+			{
+				"id": "ad47e5cd-8dc2-4a0c-ab12-75ba18749e33",
+				"method": "PUT"
+			},
+			{
+				"id": "a33a8266-3304-4096-b2a8-2fd1ebb06a2e",
+				"method": "PATCH"
+			},
+			{
+				"id": "1eedbc8f-2a98-448a-b45d-9ea58d6baef8",
+				"method": "DELETE"
+			}
+		]
+	}
+}
